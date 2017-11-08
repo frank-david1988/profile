@@ -1,0 +1,19 @@
+{
+  "comments":[
+  	{
+	  	"id" : 1,
+		"author" : "Zan Ni",
+		"body" : "Hello World!"
+  	},
+  	{
+	  	"id" : 2,
+		"author" : "David",
+		"body" : "Hell World!"
+  	},
+  	{
+	  	"id" : 3,
+		"author" : "Lucas",
+		"body" : "I love this World!"
+  	}
+  ]
+}
