@@ -19,7 +19,21 @@ $animationStyle8: margin 0.25s linear 0.2s;
   }
 }
 
+::-webkit-scrollbar { 
+    display: none; 
+}
+::-moz-scrollbar { 
+    display: none; 
+}
+::-o-scrollbar { 
+    display: none; 
+}
+::-ms-scrollbar { 
+    display: none; 
+}
+
 body {
+
   font-family: "Gotham SSm A","Gotham SSm B",Arial,sans-serif;
   overflow: hidden;
   opacity: 1;
@@ -36,11 +50,11 @@ body {
     margin: 0px;
   }
   &.menu-shown {
-    padding: 20px;
+    padding: 40px;
     .zn-moving-bg-wrapper {
-      margin: 20px;
+      margin: 40px;
         * {
-        opacity: 0.2;
+       /* opacity: 0.2;*/
       }
       .zn-moving-bg-copy {
         h1 {
@@ -95,7 +109,7 @@ body {
           font-family: "Times New Roman", Times, serif;
           font-style: italic;
           font-weight: 200;
-          font-size: 24px;
+          font-size: 20px;
           line-height: 2.5em;
           position: relative;
           top: -20px;
@@ -123,16 +137,37 @@ body {
 
   }
 
+  .zn-grey-overlay {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #000;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    &.shown-overlay {
+      opacity: 0.5;
+      z-index: 10;
+    }
+  }
+
   &.child-page {
     overflow: visible;
+    padding:0;
       .zn-moving-bg-wrapper {
+        margin:0;
         min-height: 650px;
         position: relative;
-        /*background-image: url('../../img/hp-background.jpg');
+        background-image: url('../../img/resume-hero.jpg');
         background-position: center center;
         background-size: cover;
-        background-attachment: fixed;*/
-        .zn-moving-bg-img {
+        background-attachment: fixed;
+        /*.zn-moving-bg-img {
           position: fixed;
           width: 100%;
           z-index: -1;
@@ -140,7 +175,7 @@ body {
           left: 0;
           right: 0;
           bottom: 0;
-        }
+        }*/
 
       }
       &.menu-shown {
@@ -155,11 +190,12 @@ body {
 
     section#zn-resume {
       background: #fff;
+      padding: 40px 0;
       .zn-col-wrapper {
         max-width: 1280px;
         margin: auto;
         display: flex;
-        padding: 96px 60px;
+        padding: 50px 60px;
         box-sizing: border-box;
         .zn-col-3 {
           width: 33.333%;
@@ -206,6 +242,28 @@ body {
       line-height: 1.8em;
       text-transform: none;
       color: rgba(26,26,26,.75);
+     }
+     .zn-section-divider {
+       width: 80%;
+       margin: auto;
+        hr{
+          color: #ddd;
+          background-color: #ddd;
+          border: none;
+          height: 1px;
+        }
+     }
+     .zn-lazy-load {
+          position: relative;
+          top: 50px;
+          visibility: hidden;
+          opacity: 0;
+          transition: all 1s ease;
+          &.initiate-lazy-load {
+            top: 0;
+            visibility: visible;
+            opacity: 1;
+          }
      }
     }
 
