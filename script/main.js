@@ -45,16 +45,21 @@ $(document).ready(function(){
 
 	});
 
-	/*function lazyLoad(windowTop, sectionTop){
-		var windowBottom = windoTop + $(window).height();
-		if(windowBottom > sectionTop) {
-
+	function lazyLoad(windowTop, this_section){
+		var windowBottom = windowTop + $(window).height() - 100;
+		if(!this_section.hasClass('initiate-lazy-load') && windowBottom > (this_section.offset().top)) {
+			this_section.addClass('initiate-lazy-load');
 		}	
-	};*/
-
+	};
+// loaded in the middle of the page
+	$('.zn-lazy-load').each(function(){
+			lazyLoad($(window).scrollTop(), $(this));
+		});
+//page on scroll
 	$(window).scroll(function(){
-
-
+		$('.zn-lazy-load').each(function(){
+			lazyLoad($(window).scrollTop(), $(this));
+		});
 	})
 
 });
