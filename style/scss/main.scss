@@ -109,7 +109,7 @@ body {
           font-family: "Times New Roman", Times, serif;
           font-style: italic;
           font-weight: 200;
-          font-size: 20px;
+          font-size: 22px;
           line-height: 2.5em;
           position: relative;
           top: -20px;
@@ -159,6 +159,9 @@ body {
   &.child-page {
     overflow: visible;
     padding:0;
+      #zn-site-wrapper .zan-logo-link {
+        position: absolute;
+      }
       .zn-moving-bg-wrapper {
         margin:0;
         min-height: 650px;
@@ -176,9 +179,11 @@ body {
           right: 0;
           bottom: 0;
         }*/
-
       }
       &.menu-shown {
+        #zn-site-wrapper .zan-logo-link {
+          position: fixed;
+        }
         .zn-moving-bg-wrapper {
           margin: 0;
         }
@@ -188,7 +193,7 @@ body {
       position: relative;
      } 
 
-    section#zn-resume {
+    section#zn-resume, section#zn-mywork {
       background: #fff;
       padding: 40px 0;
       .zn-col-wrapper {
@@ -213,12 +218,6 @@ body {
         .zn-col-7 {
           width: 66.667%;
           display: flex;
-          .zn-col-6 {
-            width: 60%;
-          }
-          .zn-col-4 {
-            width: 40%;
-          }
             .zn-col-content {
                h3 {
                   font-weight: 500;
@@ -230,6 +229,53 @@ body {
              } 
           }
         }
+        .zn-col-6 {
+            width: 60%;
+            &.zn-mywork-img {
+
+            }
+            &.image-right {
+              text-align: right;
+            }
+            &.image-left {
+              text-align: left;
+            }
+            img {width: 85%;}
+          }
+          .zn-col-4 {
+            width: 40%;
+            &.zn-mywork-text {
+              .zn-mywork-text-wrapper {
+                 h2 {
+                  font-size: 30px;
+                  font-weight: 300;
+                 }
+                 p {
+                  font-weight: 14px;
+                  font-weight: 300;
+                  padding: 25px 0 35px;
+                 }
+                 a {
+                  display: inline-block;
+                  text-transform: uppercase;
+                  text-decoration: none;
+                  border: #000 2px solid;
+                  padding: 15px 25px;
+                  font-size: 14px;
+                  color: #1a1a1a;
+
+                 }
+
+              }
+            }
+            &.text-left {
+              text-align: left;
+            }
+            &.text-right {
+              text-align: right;
+            }
+            
+          }
       }
      h1, h2, h3 {
       color: #1a1a1a;
@@ -253,24 +299,31 @@ body {
           height: 1px;
         }
      }
-     .zn-lazy-load {
-          position: relative;
-          top: 50px;
-          visibility: hidden;
-          opacity: 0;
-          transition: all 1s ease;
-          &.initiate-lazy-load {
-            top: 0;
-            visibility: visible;
-            opacity: 1;
-          }
-     }
+     img {width: 100%;}
     }
+    section#zn-mywork {
+
+    }
+
+
+
     .shown-overlay {
       opacity: 0.7;
     }
   }
-
+   
+    .zn-lazy-load {
+      position: relative;
+      top: 50px;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 1s ease;
+      &.initiate-lazy-load {
+        top: 0;
+        visibility: visible;
+        opacity: 1;
+      }
+  }
 }
 
 
@@ -585,4 +638,57 @@ body {
       }
     }
   }
+}
+
+footer.zn-site-footer {
+  width: 100%;
+  padding: 80px 40px;
+  background-color: #26262a;
+  text-align: center;
+  box-sizing: border-box;
+  * {
+    color: #fff;
+  }
+  .zn-social-media {
+    h5{
+    font-size: 38px;
+    margin: 0;
+    line-height: 1em;
+    text-transform: uppercase;
+    font-weight: 800;
+   }
+   .zn-social-media-track {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    -webkit-box-pack: start;
+    width: 240px;
+    margin: 30px auto 50px auto;
+      .zn-svg-social {
+        fill: #fdfdfd;
+        transition: fill 0.25s ease;
+        &:hover {
+          fill: #fdfdfd !important;
+        }
+      }
+      &:hover {
+        .zn-svg-social {
+          fill: rgba(255,255,255,.4);
+          transition: fill 0.5s ease;
+        }
+      }
+    }
+  }
+      .zn-copy-right {
+        font-size: 14px;
+        color: #dddddd;
+        * {
+          color: #ddd;
+          font-weight: 300;
+        }
+        span {
+          display: block;
+          padding-top: 10px;
+        }
+    }
 }

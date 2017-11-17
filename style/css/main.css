@@ -75,7 +75,7 @@ body {
         font-family: "Times New Roman", Times, serif;
         font-style: italic;
         font-weight: 200;
-        font-size: 20px;
+        font-size: 22px;
         line-height: 2.5em;
         position: relative;
         top: -20px;
@@ -112,6 +112,8 @@ body {
   body.child-page {
     overflow: visible;
     padding: 0; }
+    body.child-page #zn-site-wrapper .zan-logo-link {
+      position: absolute; }
     body.child-page .zn-moving-bg-wrapper {
       margin: 0;
       min-height: 650px;
@@ -129,46 +131,73 @@ body {
           right: 0;
           bottom: 0;
         }*/ }
+    body.child-page.menu-shown #zn-site-wrapper .zan-logo-link {
+      position: fixed; }
     body.child-page.menu-shown .zn-moving-bg-wrapper {
       margin: 0; }
     body.child-page .zn-main-content {
       z-index: 5;
       position: relative; }
-    body.child-page section#zn-resume {
+    body.child-page section#zn-resume, body.child-page section#zn-mywork {
       background: #fff;
       padding: 40px 0; }
-      body.child-page section#zn-resume .zn-col-wrapper {
+      body.child-page section#zn-resume .zn-col-wrapper, body.child-page section#zn-mywork .zn-col-wrapper {
         max-width: 1280px;
         margin: auto;
         display: flex;
         padding: 50px 60px;
         box-sizing: border-box; }
-        body.child-page section#zn-resume .zn-col-wrapper .zn-col-3 {
+        body.child-page section#zn-resume .zn-col-wrapper .zn-col-3, body.child-page section#zn-mywork .zn-col-wrapper .zn-col-3 {
           width: 33.333%; }
-          body.child-page section#zn-resume .zn-col-wrapper .zn-col-3 .zn-sec-header > * {
+          body.child-page section#zn-resume .zn-col-wrapper .zn-col-3 .zn-sec-header > *, body.child-page section#zn-mywork .zn-col-wrapper .zn-col-3 .zn-sec-header > * {
             font-weight: 300;
             font-style: normal;
             font-size: 26px;
             letter-spacing: .01em;
             line-height: 1.4em;
             text-transform: none; }
-        body.child-page section#zn-resume .zn-col-wrapper .zn-col-7 {
+        body.child-page section#zn-resume .zn-col-wrapper .zn-col-7, body.child-page section#zn-mywork .zn-col-wrapper .zn-col-7 {
           width: 66.667%;
           display: flex; }
-          body.child-page section#zn-resume .zn-col-wrapper .zn-col-7 .zn-col-6 {
-            width: 60%; }
-          body.child-page section#zn-resume .zn-col-wrapper .zn-col-7 .zn-col-4 {
-            width: 40%; }
-          body.child-page section#zn-resume .zn-col-wrapper .zn-col-7 .zn-col-content h3 {
+          body.child-page section#zn-resume .zn-col-wrapper .zn-col-7 .zn-col-content h3, body.child-page section#zn-mywork .zn-col-wrapper .zn-col-7 .zn-col-content h3 {
             font-weight: 500;
             font-style: normal;
             font-size: 14px;
             letter-spacing: .01em;
             line-height: 1.4em;
             text-transform: uppercase; }
-      body.child-page section#zn-resume h1, body.child-page section#zn-resume h2, body.child-page section#zn-resume h3 {
+        body.child-page section#zn-resume .zn-col-wrapper .zn-col-6, body.child-page section#zn-mywork .zn-col-wrapper .zn-col-6 {
+          width: 60%; }
+          body.child-page section#zn-resume .zn-col-wrapper .zn-col-6.image-right, body.child-page section#zn-mywork .zn-col-wrapper .zn-col-6.image-right {
+            text-align: right; }
+          body.child-page section#zn-resume .zn-col-wrapper .zn-col-6.image-left, body.child-page section#zn-mywork .zn-col-wrapper .zn-col-6.image-left {
+            text-align: left; }
+          body.child-page section#zn-resume .zn-col-wrapper .zn-col-6 img, body.child-page section#zn-mywork .zn-col-wrapper .zn-col-6 img {
+            width: 85%; }
+        body.child-page section#zn-resume .zn-col-wrapper .zn-col-4, body.child-page section#zn-mywork .zn-col-wrapper .zn-col-4 {
+          width: 40%; }
+          body.child-page section#zn-resume .zn-col-wrapper .zn-col-4.zn-mywork-text .zn-mywork-text-wrapper h2, body.child-page section#zn-mywork .zn-col-wrapper .zn-col-4.zn-mywork-text .zn-mywork-text-wrapper h2 {
+            font-size: 30px;
+            font-weight: 300; }
+          body.child-page section#zn-resume .zn-col-wrapper .zn-col-4.zn-mywork-text .zn-mywork-text-wrapper p, body.child-page section#zn-mywork .zn-col-wrapper .zn-col-4.zn-mywork-text .zn-mywork-text-wrapper p {
+            font-weight: 14px;
+            font-weight: 300;
+            padding: 25px 0 35px; }
+          body.child-page section#zn-resume .zn-col-wrapper .zn-col-4.zn-mywork-text .zn-mywork-text-wrapper a, body.child-page section#zn-mywork .zn-col-wrapper .zn-col-4.zn-mywork-text .zn-mywork-text-wrapper a {
+            display: inline-block;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: #000 2px solid;
+            padding: 15px 25px;
+            font-size: 14px;
+            color: #1a1a1a; }
+          body.child-page section#zn-resume .zn-col-wrapper .zn-col-4.text-left, body.child-page section#zn-mywork .zn-col-wrapper .zn-col-4.text-left {
+            text-align: left; }
+          body.child-page section#zn-resume .zn-col-wrapper .zn-col-4.text-right, body.child-page section#zn-mywork .zn-col-wrapper .zn-col-4.text-right {
+            text-align: right; }
+      body.child-page section#zn-resume h1, body.child-page section#zn-resume h2, body.child-page section#zn-resume h3, body.child-page section#zn-mywork h1, body.child-page section#zn-mywork h2, body.child-page section#zn-mywork h3 {
         color: #1a1a1a; }
-      body.child-page section#zn-resume p, body.child-page section#zn-resume span, body.child-page section#zn-resume li {
+      body.child-page section#zn-resume p, body.child-page section#zn-resume span, body.child-page section#zn-resume li, body.child-page section#zn-mywork p, body.child-page section#zn-mywork span, body.child-page section#zn-mywork li {
         font-weight: 400;
         font-style: normal;
         font-size: 16px;
@@ -176,26 +205,28 @@ body {
         line-height: 1.8em;
         text-transform: none;
         color: rgba(26, 26, 26, 0.75); }
-      body.child-page section#zn-resume .zn-section-divider {
+      body.child-page section#zn-resume .zn-section-divider, body.child-page section#zn-mywork .zn-section-divider {
         width: 80%;
         margin: auto; }
-        body.child-page section#zn-resume .zn-section-divider hr {
+        body.child-page section#zn-resume .zn-section-divider hr, body.child-page section#zn-mywork .zn-section-divider hr {
           color: #ddd;
           background-color: #ddd;
           border: none;
           height: 1px; }
-      body.child-page section#zn-resume .zn-lazy-load {
-        position: relative;
-        top: 50px;
-        visibility: hidden;
-        opacity: 0;
-        transition: all 1s ease; }
-        body.child-page section#zn-resume .zn-lazy-load.initiate-lazy-load {
-          top: 0;
-          visibility: visible;
-          opacity: 1; }
+      body.child-page section#zn-resume img, body.child-page section#zn-mywork img {
+        width: 100%; }
     body.child-page .shown-overlay {
       opacity: 0.7; }
+  body .zn-lazy-load {
+    position: relative;
+    top: 50px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease; }
+    body .zn-lazy-load.initiate-lazy-load {
+      top: 0;
+      visibility: visible;
+      opacity: 1; }
 
 @-webkit-keyframes rotate {
   0% {
@@ -465,3 +496,42 @@ body {
               font-size: 30px;
               font-family: "Times New Roman", Times, serif;
               font-style: italic; }
+
+footer.zn-site-footer {
+  width: 100%;
+  padding: 80px 40px;
+  background-color: #26262a;
+  text-align: center;
+  box-sizing: border-box; }
+  footer.zn-site-footer * {
+    color: #fff; }
+  footer.zn-site-footer .zn-social-media h5 {
+    font-size: 38px;
+    margin: 0;
+    line-height: 1em;
+    text-transform: uppercase;
+    font-weight: 800; }
+  footer.zn-site-footer .zn-social-media .zn-social-media-track {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    -webkit-box-pack: start;
+    width: 240px;
+    margin: 30px auto 50px auto; }
+    footer.zn-site-footer .zn-social-media .zn-social-media-track .zn-svg-social {
+      fill: #fdfdfd;
+      transition: fill 0.25s ease; }
+      footer.zn-site-footer .zn-social-media .zn-social-media-track .zn-svg-social:hover {
+        fill: #fdfdfd !important; }
+    footer.zn-site-footer .zn-social-media .zn-social-media-track:hover .zn-svg-social {
+      fill: rgba(255, 255, 255, 0.4);
+      transition: fill 0.5s ease; }
+  footer.zn-site-footer .zn-copy-right {
+    font-size: 14px;
+    color: #dddddd; }
+    footer.zn-site-footer .zn-copy-right * {
+      color: #ddd;
+      font-weight: 300; }
+    footer.zn-site-footer .zn-copy-right span {
+      display: block;
+      padding-top: 10px; }
