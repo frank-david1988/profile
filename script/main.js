@@ -5,7 +5,12 @@ $(document).ready(function(){
 	var navButton = $(".zn-nav-button"),
 		bubble = $(".zn-nav-bubble"),
 		bubbleHight = bubble.height(),
-		bubbleWidth = bubble.width();
+		bubbleWidth = bubble.width(),
+		videoModal = $('.zn-video-wrapper'),
+		videoClose = $('.zn-video-wrapper .zn-video-close'),
+		videoScr = './video/',
+		videoPlayer = document.getElementById('zn-video'),
+		videoDelay = 1000;
 
 	//to remove the black bar on Firefox
 	(function() {
@@ -61,6 +66,25 @@ $(document).ready(function(){
 			lazyLoad($(window).scrollTop(), $(this));
 		});
 	})
+//video modal 
+
+	$('.zn-video-src').on('click', function(event){
+		event.preventDefault();
+		//videoModal.fadeIn(videoDelay);
+		videoModal.addClass('video-active').closest('body').addClass('video-playing');
+		var videoData = $(this).data('video');
+		videoPlayer.src = videoScr + videoData;
+		setTimeout(function(){
+			videoPlayer.play();
+		}, videoDelay)
+	});
+
+	videoClose.on('click', function(){
+		videoPlayer.pause();
+		//videoModal.fadeOut(videoDelay);
+		videoModal.removeClass('video-active').closest('body').removeClass('video-playing');
+	});
+
 
 });
 
