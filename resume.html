@@ -71,6 +71,13 @@
           <!--<img src="./img/hp-background.jpg" class="zn-moving-bg-img" />-->
       </div>
     </div>
+    <!-- sticky menu -->
+    <div class="zn-sticky-nav-button">
+        <span class="zn-nav-plus"></span>
+        <div class="zn-sticky-nav-inner">
+            <div class="zn-sticky-item"><a href="" name="zn-resume">RESUME</a></div>|<div class="zn-sticky-item"><a href="" name="zn-mywork">PROJECTS</a></div>
+        </div>
+    </div> 
     <div class="zn-grey-overlay"></div>
     <!-- Video modal overlay-->
     <div class="zn-video-wrapper">
@@ -80,11 +87,9 @@
           Your browser does not support HTML5 video.
         </video>
     </div>
-
-
-    <div class="zn-main-content">
+    <div class="zn-main-content">   
     <!-- Resume body START-->
-    <section id="zn-resume">
+    <section id="zn-resume" class="zn-section-item active-section">
         <div class="">
             <div class="zn-col-wrapper zn-lazy-load">
                 <div class="zn-col-3">
@@ -132,37 +137,21 @@
                         </div>
                 </div>
                 <div class="zn-col-7">
-                       <!-- <div class="zn-col-6 col">
-                                <div class="zn-col-content">
-                                    <h3>Day-to-day Comfort</h3>
-                                    <ul>
-                                        <li>HTML5 / CSS3 / SCSS</li>
-                                        <li>JavaScript / jQuery</li>
-                                        <li>Adobe AEM Front-End Dev</li>
-                                        <li>Photoshop / Sketch</li>
-                                        <li>Version Control ( GIT )</li>
-                                        <li>Responsive Layout and Design</li>
-                                        <li>Agile Methodology</li>
-                                        <li>Cross-Browser Compatibility</li>
-                                        <li>Mobile First Thinking</li>
-                                    </ul>
-                                </div>
-                        </div>
-                        <div class="zn-col-4 col">
-                                <div class="zn-col-content">
-                                    <h3>Experience with</h3>
-                                    <ul>
-                                        <li>AJAX</li>
-                                        <li>Node.js (limited)</li>
-                                        <li>React.js (limited)</li>
-                                        <li>Angular.js (limited)</li>
-                                    </ul>
-                                </div>
-                        </div>-->
                         <div class="zn-work-experience-group">
                             <div class="zn-work-experience-item">
                                 <h3>Front-End Developer</h3>
-                                <p><strong>ServiceNow, Santa Clara, CA, July 2014 - Present</strong><br>ServiceNow makes work life like.</p>
+                                <p><strong><a href="https://www.servicenow.com" target="_blank">ServiceNow</a>, Santa Clara, CA, July 2014 - Present</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                <ul>
+                                    <li>HTML5 / CSS3 / SCSS</li>
+                                    <li>JavaScript / jQuery</li>
+                                    <li>Adobe AEM Front-End Dev</li>
+                                    <li>Photoshop / Sketch</li>
+                                    <li>Version Control ( GIT )</li>
+                                    <li>Responsive Layout and Design</li>
+                                    <li>Agile Methodology</li>
+                                    <li>Cross-Browser Compatibility</li>
+                                    <li>Mobile First Thinking</li>
+                                </ul>
                             </div>
 
                         </div>
@@ -214,7 +203,7 @@
 
     <!-- My Work START -->
 
-    <section id="zn-mywork">
+    <section id="zn-mywork" class="zn-section-item">
         <div class="">
             <div class="zn-col-wrapper zn-lazy-load">
                 <div class="zn-col-4 text-left zn-mywork-text">
@@ -275,9 +264,10 @@
     </section>
     <!-- My Work End-->
 
-    <!-- Footer START -->
+    </div>
+        <!-- Footer START -->
     <footer class="zn-site-footer">
-        <div class="zn-footer-wrapper zn-lazy-load">
+        <div class="zn-footer-wrapper">
             <div class="zn-social-media">
                 <h5>Let's Connect on Following.</h5>
                 <div class="zn-social-media-track">
@@ -310,7 +300,6 @@
     </footer>
 
     <!-- Footer END -->
-    </div>
 
     <!-- JS script import  START-->
     <script type="text/javascript" src="./script/main.js"></script>

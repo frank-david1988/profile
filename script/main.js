@@ -10,14 +10,23 @@ $(document).ready(function(){
 		videoClose = $('.zn-video-wrapper .zn-video-close'),
 		videoScr = './video/',
 		videoPlayer = document.getElementById('zn-video'),
-		videoDelay = 1000;
+		videoDelay = 1000,
+		switchPlusButton = $('.zn-sticky-nav-button'),
+		switchPlusButtonAnchor = $('.zn-sticky-item a');
 
 	//to remove the black bar on Firefox
 	(function() {
 		$('.zn-moving-bg-img-home').addClass("active-img");
 		$('.zn-moving-bg-copy h1').addClass("copy_slide_up");
 		$('.zn-moving-bg-copy span').addClass("copy_slide_down");
+//set the banner same height as the browser
+		$('#zn-site-wrapper .zn-moving-bg-wrapper').css('min-height', $(window).outerHeight());	
+		//setTimeout(function(){
+			switchPlusButton.addClass('zn-move-onload');
+		//}, 1000);
+
 	})();
+
 
 	navButton.click(function(){
 		if($(this).hasClass('nav-active')){
@@ -57,17 +66,16 @@ $(document).ready(function(){
 		}	
 	};
 // loaded in the middle of the page
-	$('.zn-lazy-load').each(function(){
+	$('.active-section .zn-lazy-load').each(function(){
 			lazyLoad($(window).scrollTop(), $(this));
 		});
 //page on scroll
 	$(window).scroll(function(){
-		$('.zn-lazy-load').each(function(){
+		$('.active-section .zn-lazy-load').each(function(){
 			lazyLoad($(window).scrollTop(), $(this));
 		});
 	})
 //video modal 
-
 	$('.zn-video-src').on('click', function(event){
 		event.preventDefault();
 		//videoModal.fadeIn(videoDelay);
@@ -85,6 +93,27 @@ $(document).ready(function(){
 		videoModal.removeClass('video-active').closest('body').removeClass('video-playing');
 	});
 
+	switchPlusButton.on('click', function(){
+		if($(this).hasClass('zn-open')){
+			$(this).removeClass('zn-open').children('.zn-sticky-nav-inner').css('visibility','hidden');
+		}
+		else{
+			$(this).addClass('zn-open').children('.zn-sticky-nav-inner').css('visibility','visible');
+		}
+	});
+
+	switchPlusButtonAnchor.on('click', function(event){
+		event.preventDefault();
+		let anchorValue = $(this).attr('name'),
+			thisAnchor = $('#' + anchorValue);
+		if(!(thisAnchor).hasClass('active-section')){
+			$('.zn-section-item.active-section').removeClass('active-section');
+			thisAnchor.addClass('active-section');
+		}
+		$('html, body').animate({
+            scrollTop: $('.zn-main-content').offset().top
+        }, 1000)
+	});
 
 });
 
